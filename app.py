@@ -3,6 +3,9 @@ import cv2
 from PIL import Image
 from detector import detect_persons
 from utils.helpers import read_image
+from streamlit_webrtc import webrtc_streamer, VideoProcessorBase
+import av
+
 
 # --------------------------------------------------
 # PAGE CONFIG
@@ -316,29 +319,25 @@ elif st.session_state.mode == "image":
             )
 
 # ==================================================
-# LIVE WEBCAM PAGE
+# LIVE WEBCAM PAGE (WEBRTC VERSION)
 # ==================================================
 
 elif st.session_state.mode == "webcam":
-    st.markdown("<h2 style='text-align:center'>Live Webcam Detection</h2>", unsafe_allow_html=True)
 
-    start = st.button("Start Camera")
 
-    frame_placeholder = st.empty()
-    st.success(f"Status: {'LIVE' if start else 'OFFLINE'}")
-    st.success(f"Model: YOLOv8")
+    st.markdown("""
+    <h2 style='text-align:center'>
+    Live Webcam Detection
+    </h2>
+    """, unsafe_allow_html=True)
 
-    if start:
-        camera = cv2.VideoCapture(0)
+    class VideoProcessor(VideoProcessorBase):
 
-        while start:
-            ret, frame = camera.read()
-            if not ret:
-                st.error("Camera not accessible")
-                break
+        def recv(self, frame):
 
-            result_frame, count = detect_persons(frame)
+            img = frame.to_ndarray(format="bgr24")
 
+            result_frame, count = detect_persons(img)
 
             cv2.putText(
                 result_frame,
@@ -350,8 +349,23 @@ elif st.session_state.mode == "webcam":
                 2
             )
 
-    
-            frame_placeholder.image(result_frame, channels="BGR", use_container_width=True)
+            return av.VideoFrame.from_ndarray(
+                result_frame,
+                format="bgr24"
+            )
 
-        camera.release()
+    # same UI style as your image page
+    st.success("Status: LIVE")
+    st.success("Model: YOLOv8")
+    st.info("""
+    Click START below and allow browser camera access.
+    """)
 
+    webrtc_streamer(
+        key="crowdvision-webcam",
+        video_processor_factory=VideoProcessor,
+        media_stream_constraints={
+            "video": True,
+            "audio": False
+        }
+    )
