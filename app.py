@@ -8,7 +8,7 @@ from utils.helpers import read_image
 # PAGE CONFIG
 # --------------------------------------------------
 
-logo = Image.open("assets\\app_icon.png")
+logo = Image.open("assets/app_icon.png")
 logo1 = Image.open("assets/app_icon.png")
 
 st.set_page_config(
