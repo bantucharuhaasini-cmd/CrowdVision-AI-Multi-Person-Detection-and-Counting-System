@@ -1,38 +1,57 @@
 # CrowdVision AI
 
-AI-Powered Multi-Person Detection System built using Streamlit, OpenCV, and YOLOv8.
+### AI-Powered Multi-Person Detection and Counting System
+
+CrowdVision AI is a real-time computer vision application that leverages YOLOv8, OpenCV, Streamlit, and WebRTC to accurately detect, track, and count multiple people in uploaded images and live webcam streams.
+
+Designed for crowd monitoring and intelligent surveillance applications, the system provides instant person detection, live analytics, and an interactive web-based dashboard for seamless user experience.
 
 ![CrowdVision AI Home Screen](assets/home_page.png)
 
 ---
 
-## Overview
+## 🚀 Live Demo
 
-CrowdVision AI is a computer vision application that detects and counts multiple people in images and live webcam feeds. The system leverages the YOLOv8 object detection model to perform accurate real-time person detection and counting.
+**Try the application here:**
 
-The application provides an intuitive user interface where users can either upload images for analysis or use a live webcam feed for real-time monitoring.
-
----
-
-## Live Demo
-
-[Open CrowdVision AI](https://crowdvision-ai-multi-person-detection-and-counting-system-5sfb.streamlit.app)
-
-## Features
-
-- 🎯 Multi-Person Detection using YOLOv8
-- 📷 Image Upload Detection
-- 🎥 Real-Time Webcam Detection
-- 👥 Automatic Person Counting
-- 📊 Live Detection Statistics
-- 💾 Download Processed Images
-- 🌐 Interactive Streamlit Web Interface
-- ⚡ Fast and Accurate Detection
-- 🎨 User-Friendly Dashboard
+https://crowdvision-ai-multi-person-detection-and-counting-system-5sfb.streamlit.app
 
 ---
 
-## Demo Screenshots
+## 📌 Key Features
+
+* 🎯 Real-Time Multi-Person Detection using YOLOv8
+* 👥 Accurate Person Counting
+* 📷 Image Upload Detection
+* 🎥 Live Webcam Detection via WebRTC
+* 📊 Live Detection Statistics
+* 💾 Download Detection Results
+* ⚡ Fast and Efficient Inference
+* 🌐 Fully Interactive Streamlit Dashboard
+* 🎨 Modern and User-Friendly Interface
+* ☁️ Cloud-Deployed Application
+
+---
+
+## 📖 Project Overview
+
+CrowdVision AI utilizes the YOLOv8 object detection framework to identify and localize people within images and live video streams.
+
+The application supports two primary modes:
+
+### 🖼 Image Detection Mode
+
+Users can upload an image, perform person detection, view the total count, and download the processed output image.
+
+### 🎥 Live Webcam Detection Mode
+
+Users can access their device camera directly through the browser and perform real-time person detection using WebRTC technology.
+
+The system is designed to demonstrate practical applications of Artificial Intelligence and Computer Vision in crowd monitoring and smart surveillance environments.
+
+---
+
+## 🖼 Application Screenshots
 
 ### Home Page
 
@@ -52,18 +71,25 @@ The application provides an intuitive user interface where users can either uplo
 
 ---
 
-## Technologies Used
+### 🛠 Built With
 
-- Python
-- Streamlit
-- OpenCV
-- YOLOv8 (Ultralytics)
-- NumPy
-- Pillow
+🔹 **Python** – Core programming language used for application development.
+
+🔹 **YOLOv8 (Ultralytics)** – Deep learning model used for real-time person detection.
+
+🔹 **OpenCV** – Image processing and computer vision operations.
+
+🔹 **Streamlit** – Interactive web application framework.
+
+🔹 **WebRTC** – Browser-based live webcam streaming.
+
+🔹 **NumPy** – Efficient numerical computations and array operations.
+
+🔹 **Pillow (PIL)** – Image loading and manipulation.
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```text
 CrowdVision-AI/
@@ -72,10 +98,9 @@ CrowdVision-AI/
 ├── detector.py
 ├── requirements.txt
 ├── README.md
-├── app_icon.png
-├── app_icon1.png
 │
 ├── assets/
+│   ├── app_icon.png
 │   ├── home_page.png
 │   ├── image_detection.png
 │   ├── image_detection_result.png
@@ -85,30 +110,95 @@ CrowdVision-AI/
 │   └── helpers.py
 │
 └── __pycache__/
-
 ```
+
 ---
-## Clone Repository
-```test
+
+## ⚙ Installation
+
+### Clone Repository
+
+```bash
 git clone https://github.com/bantucharuhaasini-cmd/CrowdVision-AI-Multi-Person-Detection-and-Counting-System.git
 ```
----
-## Applications
-- Smart Surveillance Systems
-- Crowd Monitoring
-- Event Management
-- Public Area Analytics
-- Security Monitoring
-- Building Occupancy Tracking
-- Smart City Solutions
----
-## Performance
-- Real-Time Detection
-- Accurate Person Counting
-- Lightweight Streamlit Interface
-- YOLOv8-Based Detection Engine
+
+### Navigate to Project Directory
+
+```bash
+cd CrowdVision-AI-Multi-Person-Detection-and-Counting-System
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run Application
+
+```bash
+streamlit run app.py
+```
+
 ---
 
-## Author
-Charu Haasini Bantu
-B.Tech – Computer Science & Engineering (AI & DS)
+## 🎯 Applications
+
+* Smart Surveillance Systems
+* Crowd Monitoring and Management
+* Event Attendance Analysis
+* Public Space Monitoring
+* Smart City Infrastructure
+* Building Occupancy Tracking
+* Security and Safety Analytics
+* Educational Computer Vision Demonstrations
+
+---
+
+## 📈 Performance Highlights
+
+* Real-Time Person Detection
+* Accurate Crowd Counting
+* Lightweight User Interface
+* Browser-Based Webcam Access
+* Fast YOLOv8 Inference
+* Cloud Deployment Ready
+
+---
+
+## 🔮 Future Enhancements
+
+* Crowd Density Estimation
+* Heatmap Visualization
+* Video File Analysis
+* Person Tracking with Unique IDs
+* Entry/Exit Monitoring
+* Occupancy Analytics Dashboard
+* Alert System for Overcrowding
+* Multi-Camera Support
+
+---
+
+## 👨‍💻 Author
+
+**Charu Haasini Bantu**
+
+B.Tech – Computer Science & Engineering (Artificial Intelligence & Data Science)
+
+GMR Institute of Technology
+
+---
+
+## ⭐ Acknowledgements
+
+* Ultralytics YOLOv8
+* OpenCV Community
+* Streamlit
+* WebRTC
+* Python Open-Source Ecosystem
+
+---
+
+## Note
+
+This project is developed for educational, research, and learning purposes.
