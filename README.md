@@ -179,16 +179,6 @@ streamlit run app.py
 
 ---
 
-## 👨‍💻 Author
-
-**Charu Haasini Bantu**
-
-B.Tech – Computer Science & Engineering (Artificial Intelligence & Data Science)
-
-GMR Institute of Technology
-
----
-
 ## ⭐ Acknowledgements
 
 * Ultralytics YOLOv8
@@ -202,3 +192,12 @@ GMR Institute of Technology
 ## Note
 
 This project is developed for educational, research, and learning purposes.
+
+---
+
+## 👨‍💻 Author
+
+**Charu Haasini Bantu**
+
+B.Tech – Computer Science & Engineering (Artificial Intelligence & Data Science)
+
