@@ -14,6 +14,10 @@ The application provides an intuitive user interface where users can either uplo
 
 ---
 
+## Live Demo
+
+[Open CrowdVision AI](https://crowdvision-ai-multi-person-detection-and-counting-system-5sfb.streamlit.app)
+
 ## Features
 
 - 🎯 Multi-Person Detection using YOLOv8
